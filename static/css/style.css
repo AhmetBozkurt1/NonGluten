@@ -1753,7 +1753,58 @@ body.open .sepetOpenBack{
     font-size: 20px;
     color: var(--text-color);
 }
-
+/* BLOGDETAY.HTML CSS */
+.blogDetay{
+    margin-top: 10rem;
+}
+.header-title h2{
+    color: var(--text-color);
+}
+.header-subTitle{
+    justify-content: space-between;
+    align-items: center;
+}
+.subTitle-kategori{
+    display: flex;
+    column-gap: 8px;
+}
+.subTitle-tarihList{
+    display: flex;
+    column-gap: 10px;
+    list-style: none;
+    font-size: 16px;
+}
+.blogDetay-contentBody{
+    margin-top: 10px;
+}
+.contentBody-image{
+    text-align: center;
+}
+.contentBody-image img{
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+}
+.contentBody-text-paragraph{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contentBody-text-button{
+    margin-top: 30px;
+}
+.contentBody-text-button button{
+    color: var(--text-color);
+    background-color: var(--background1);
+    border: 1.1px solid black;
+    padding: 5px 30px;
+    border-radius: 5px;
+    transition: background-color .3s;
+    font-size: 18px;
+}
+.contentBody-text-button button:hover{
+    background-color: var(--background-logo);
+}
 
 /* MEDIA */
 @media(max-width:1137px){
