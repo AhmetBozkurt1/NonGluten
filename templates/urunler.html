@@ -1,0 +1,206 @@
+{% extends "index.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book</title>
+    <!-- !BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar-position">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="rounded-3" src="/images/Logo/Adsız tasarım.jpg" alt="nongluten.logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link nav-border" aria-current="page" href="blog.html">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-border" href="urunler.html">Ürünler</a>
+                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-border" href="about.html">Hakkında</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-border" href="contact.html">İletişim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-padding" href="#">
+                                    <div class="navShop-icon">
+                                        <i class="bi bi-bag"></i>
+                                        <span class="shopIcon-adet">0</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-padding" href="login.html">
+                                    <div class="navShop-user">
+                                        <i class="bi bi-person-circle"></i>
+                                        <span class="navShop-logIn">Giriş</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {% block content %}
+    <!-- MY BOOK -->
+    <section class="shopping">
+        <div class="container">
+            <div class="row shopping-baslik">
+                <h1>Alışveriş</h1>
+            </div>
+        </div>
+        <div class="container shopping-menu">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <nav class="row shopping-navbar mt-2">
+                        <div class="col-lg-8 shopping-menu-dropdowns">
+                            <div class="shopping-menu-dropdown">
+                                <a href="#" class="dropdown-button text-center">
+                                    <span>KAHVALTILIK</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <div class="shopping-menu-dropdown-hover">
+                                    <ul class="shopping-menu-dropdown-list">
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Mısır Gevreği</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shopping-menu-dropdown">
+                                <a href="#" class="dropdown-button">
+                                    <span>BULGUR</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <div class="shopping-menu-dropdown-hover">
+                                    <ul class="shopping-menu-dropdown-list">
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Karabuğday Tane</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Pilavlık Bulgur</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">İrmik</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shopping-menu-dropdown">
+                                <a href="#" class="dropdown-button">
+                                    <span>UN</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <div class="shopping-menu-dropdown-hover">
+                                    <ul class="shopping-menu-dropdown-list">
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Glutensiz Un</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Karabuğday Unu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="shopping-menu-dropdown">
+                                <a href="#" class="dropdown-button">
+                                    <span>ATIŞTIRMALIK</span>
+                                    <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <div class="shopping-menu-dropdown-hover">
+                                    <ul class="shopping-menu-dropdown-list">
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Susamlı Çubuk Kraker</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Portakallı Kurabiye</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Tahinli Kurabiye</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Portakallı Muffin Kek</a>
+                                        </li>
+                                        <li class="shopping-menu-dropdown-link">
+                                            <a href="#">Kakaolu Gofret</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="shopping-navbar-search">
+                                <div class="shopping-navbar-searchOpen">
+                                    <div class="input-group shopping-input mb-3">
+                                        <span class="input-group-text shopping-input-text">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+                                        <input type="search" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Ürün Ara">
+                                        <span class="input-group-text shopping-search-exit">
+                                            <i class="bi bi-x"></i>
+                                        </span>
+                                      </div>
+                                </div>
+                                <div class="shopping-navbar-searchNow">
+                                    <span class="shopping-searchNow-icon">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="urunler mb-5">
+        <section class="container">
+            <div class="row urunler-row row-gap-4">
+            {% for i in urunler %}
+                <article class="col-md-6 col-lg-3 urun-card-width">
+                    <div class="urun-card">
+                        <div class="urun-card-image">
+                            <img src="{{i.resim.url}}" alt="">
+                        </div>
+                        <div class="urun-card-aciklama text-center mt-4">
+                            <h5 class="urun-name">{{i.isim}}</h5>
+                            <h4 class="urun-fiyat">{{i.fiyat}} TL</h4>
+                        </div>
+                        <div class="urun-button">
+                            <ul class="urun-button-list">
+                                <li class="urun-incele">
+                                    <a href="#">İncele</a>
+                                </li>
+                                <li class="urun-sepet">
+                                    <a class="urun-ekle" href="#">Sepete Ekle</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    <script src="{% static 'js/urunler.js' %}"></script>
+    {% endblock content %}

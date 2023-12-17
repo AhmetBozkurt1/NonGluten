@@ -1,0 +1,266 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NonGlutenn</title>
+    <!-- !BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- SWIPER CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <style>
+        .section1-right-back{
+             background: 
+                linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                url({% static 'images/sectionBack.jpeg' %});
+            background-position: center;
+            background-size: cover;
+                 width: 100%;
+                height: 100%;
+                display: flex;
+            justify-content: start;
+        }
+        .section1-left{
+            height: 700px;
+            max-height: 750px;
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url({% static '/images/section1.jpg' %});
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    {% include "includes/_navbar.html" %}
+
+    {% block content %}
+    <!-- SECTION 1 -->
+    <div class="container section1">
+        <div class="row section1-row">
+            <div class="col-lg-6 section1-left rounded-2">
+                <div class="section1-text">
+                    <div class="text-paragraf">
+                        <h1 class="section1-paragraf">When Life Gives You <br> Flour and Butter, <br> You Better Bake</h1>
+                        <button class="section1-button">All Recipes</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 section1-right-display">
+                <div class="section1-right">
+                    <div class="section1-right-img">
+                        <div class="section1-right-back">
+                            <div class="section1-right-back-text">
+                                <div class="section1-right-text">
+                                    <h3>Sağlıklı ve Lezzet</h3>
+                                    <h3>Dolu Bir Güne</h3>
+                                    <h3>Merhaba</h3>
+                                </div>
+                                <div class="section1-right-button">
+                                    <button>
+                                        <a href="#">Günlük Menü</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section1-right-baslik">
+                            <a href="#" class="text-decoration-none">
+                                <h4>Glutensiz Günlük Menü</h4>
+                                <p class="section1-right-baslik-paragraph">Lezzetli ve sağlıklı bir mola arıyorsanız, doğru yerdesiniz! Bugün gününüzü glutensiz bir şölene çevirin. Taze ve doğal malzemeler ile hazırlanan menümüz, damak zevkinizi şımartacak. Sağlıklı beslenmenin keyfini çıkarın, enerji dolu bir gün geçirin. Bekliyoruz!</p>
+                            </a>
+                            <div class="section1-right-baslik-border"></div>
+                            <div class="section1-right-baslik-icon">
+                                <div class="section1-right-heart">
+                                    <span class="text-black">Devamını okumak için</span>
+                                    <a href="#">tıklayınız...</a>
+                                </div>
+                                <div class="blog-display">
+                                    <h5 class="section1-right-baslik-icon section1-right-heart">Günlük Menünüzü Görmek İçin
+                                        <a href="#">Tıklayınız.</a>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    
+    <div class="container section2">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for i in tarifler %}
+                <div class="swiper-slide row">
+                    <div class="col-md-6 section2-swiper-img">
+                        <img src="{{i.resim.url}}" alt="">
+                    </div>
+                    <div class="col-md-5 section2-swiper-text">
+                        <div>
+                            <h3 class="section2-swiper-title">Glutensiz Tarifler</h3>
+                        </div>
+                        <div class="section2-swiper-subtitle">
+                            <h3>{{i.isim}}</h3>
+                        </div>
+                        <div class="section2-swiper-aciklama">
+                            <p>{{i.aciklama}}</p>
+                        </div>
+                        <div class="section2-swiper-button">
+                            <button class="swiper-btn">
+                                <a href="#">İncele</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="container section3">
+        <div class="row justify-content-center">
+            <div class="col-md-6 section3-left order-2 order-md-1">
+                <div class="section3-left-baslik">
+                    <h3>Sugar, Spice <br> and Everything Nice</h3>
+                </div>
+                <div class="section3-left-baslik2 mt-2">
+                    <h5>Hi, I'm Kubra</h5>
+                </div>
+                <div class="section-left-text">
+                    <p>I'm a paragraph. Click here to add your own text <br> and edit me. It’s easy. Just click “Edit Text” or <br> double click me to add your own content and <br> make changes to the font. I’m a great place for <br> you to tell a story and let your users know a little <br> more about you.</p>
+                </div>
+                <div class="section3-left-btn">
+                    <button type="button">About Me</button>
+                </div>
+            </div>
+            <div class="col-md-6 section3-right order-1 order-md-2">
+                <div class="section3-right-img">
+                    <img src="{% static '/images/glutenfree.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section5-background">
+        <div class="container">
+            <div class="row section5-row">
+                <div class="col-12">
+                    <div class="section5-alt-text">
+                        <h3>Follow Me @non_glutenn</h3>
+                    </div>
+                    <div class="row section5-alt-text-border">
+                        {% for i in instagram %}
+                        <div class="col-md-4 col-lg-2 section5-alt-text-pad">
+                            <div class="section5-alt-text-image">
+                                <img src="{{i.resim.url}}" alt="">
+                                <div class="section5-imageOn">
+                                    <div class="section5-imageOn-text">
+                                        <a href="#">
+                                            <i class="bi bi-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}
+    
+    <!-- SECTION 6 -->
+    <div class="section6-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section6 text-center">
+                    <div class="section6-text">
+                        <div class="section6-baslik">
+                            <h3>There's Always Something in the Oven</h3>
+                        </div>
+                        <div class="section6-btn mt-4">
+                            <button type="button">SIGN UP FOR MY NEWSLETTER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    {% include 'includes/_footer.html' %}
+
+    <!-- CART OPEN BACKGROUND BLUR -->
+    <div class="sepetOpenBack"></div>
+
+    <!-- CART -->
+    <div class="cart">
+        <aside class="aside-cart">
+            <div class="aside-cart-baslik">
+                <div class="aside-cart-icon">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div class="aside-cart-text m-auto">
+                    <h2>SEPET</h2>
+                </div>
+            </div>
+            <div class="aside-cart-urunler">
+                <!-- SEPET ALANI -->
+            </div>
+            <div class="aside-cart-footer">
+                <div class="aside-cart-total">
+                    <h3 class="ps-3">Sepet Toplam:</h3>
+                    <h4 class="aside-cart-allFiyat ps-3"></h4>
+                </div>
+                <div class="aside-cart-sepetPage mt-4 text-center">
+                    <button class="sepeteGit">
+                        <a class="sepeteGit-link" href="{% url 'sepet' %}">Sepeti Görüntüle</a>
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <!-- SOCIAL MEDIA ICONS -->
+    <aside class="socialMedia-position">
+        <ul class="socialMedia-positionlist">
+            <li>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </li>
+        </ul>
+    </aside>
+
+
+
+
+
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/a09e04a105.js" crossorigin="anonymous"></script>
+    <!-- !BOOTSTRAP SCRİPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- SWIPER JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="{% static 'js/cartOpen.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>

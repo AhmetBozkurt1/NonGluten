@@ -1,0 +1,84 @@
+{% extends "index.html" %}
+{% load static %}
+
+    {% block content %}
+    <!-- RECIPES -->
+    <section class="recipes">
+        <div class="container">
+            <div class="row recipes-baslik">
+                <h1>Blog</h1>
+            </div>
+        </div>
+        <div class="container recipes-section">
+            <div class="row recipes-section-row">
+                <div class="col-11">
+                    <nav class="recipes-navbar">
+                        <div class="row recipes-navbar-row">
+                            <div class="col-md-4 recipes-navbar-col">
+                                <div class="recipes-navbar-menu">
+                                    <h4>Tüm Bloglar</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-6 recipes-navbar-right">
+                                <div class="recipes-navbar-search">
+                                    <div class="searchOpen">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-search"></i>
+                                            </span>
+                                            <input type="search" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Blog Ara">
+                                            <span class="input-group-text search-exit">
+                                                <i class="bi bi-x"></i>
+                                            </span>
+                                          </div>
+                                    </div>
+                                    <div class="searchNow">
+                                        <span class="searchNow-icon">
+                                            <i class="bi bi-search"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <article class="recipes-article">
+                        {% for i in bloglar %}
+                        <div class="row recipes-article-card">
+                            <div class="col-lg-5 recipes-article-img">
+                                <img src="{{i.resim.url}}" alt="">
+                            </div>
+                            <div class="col-lg-7 recipes-article-col">
+                                <div class="recipes-article-text">
+                                    <div class="recipes-article-baslik">
+                                        <h4>{{i.isim}}</h4>
+                                        <div class="recipes-article-aciklama mt-3">
+                                            <p>{{i.aciklama}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="recipes-article-altInfo">
+                                        <div class="recipes-info-btn">
+                                            <button>
+                                                <a href="#">Devamı</a>
+                                            </button>
+                                        </div>
+                                        <div class="recipes-date">
+                                            <ul class="recipes-date-list">
+                                                <li><i class="bi bi-calendar3"></i></li>
+                                                <li>{{i.tarih}}</li>
+                                                <li><i class="bi bi-clock"></i></li>
+                                                <li>{{i.saat}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static 'js/recipes.js' %}"></script>
+    {% endblock content %}

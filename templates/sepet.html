@@ -1,0 +1,78 @@
+{% extends "index.html" %}
+{% load static %}
+    
+    {% block content %}
+    <!-- SEPET.HTML -->
+    <main class="container sepet">
+        <div class="row sepetDisplayNone">
+            <article class="col-md-9 sepet-left">
+                <div class="sepet-left-content">
+                    <div class="sepet-content-baslik">
+                        <h3>SEPET DETAYI</h3>
+                    </div>
+                    <div class="sepet-content-urunCart">
+                        <div class="sepet-content-urunler h-100">
+                            
+                        </div>
+                    </div>
+                    <div class="sepet-content-shopDevam mt-2">
+                        <button class="sepet-shopDevam-btn">
+                            <i class="shopDevam-btn-icon bi bi-arrow-left"></i>
+                            <a class="shopDevam-link" href="{% url 'urunler' %}">Alışverişe Devam Et</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="sepet-left-altContent mt-3">
+                    <div class="sepet-altContent-baslik">
+                        <h3>HEDİYE ÇEKİ</h3>
+                    </div>
+                    <div class="sepet-altContent-kupon">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Hediye Çeki Kullan
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sepet-altContent-entry mt-2">
+                        <input class="altContent-input" type="text" placeholder="KOD GİRİNİZ.">
+                        <a class="altContent-link" href="#">KULLAN</a>
+                    </div>
+                </div>
+            </article>
+            <article class="col-md-3 sepet-right">
+                <div class="sepet-right-pay">
+                    <div class="sepet-pay-baslik">
+                        <h3>SEPET ÖZETİ</h3>
+                    </div>
+                    <div class="sepet-pay-fiyatlar">
+                        <div class="sepet-pay-araToplam pay-flex">
+                            <span class="sepet-fiyatlar-baslik">Ara Toplam</span>
+                            <span class="sepet-araToplam-fiyat sepet-fiyatlar-tutar">0</span>
+                        </div>
+                        <div class="sepet-pay-kdvFiyat pay-flex">
+                            <span class="sepet-fiyatlar-baslik">KDV</span>
+                            <span class="sepet-pay-kdv sepet-fiyatlar-tutar">0</span>
+                        </div>
+                        <div class="sepet-pay-kdvDahilFiyat pay-flex">
+                            <span class="sepet-fiyatlar-baslik">KDV Dahil</span>
+                            <span class="sepet-pay-kdvDahil sepet-fiyatlar-tutar">0</span>
+                        </div>
+                    </div>
+                    <div class="sepet-pay-fiyatlarToplam pay-flex mt-1">
+                        <span class="sepet-fiyatlar-total align-self-end">Toplam</span>
+                        <span class="sepet-pay-fiyatTotal">0</span>
+                    </div>
+                    <div class="sepet-alisverisTamamla mt-2">
+                        <a class="alisverisTamamla-link" href="#">ALIŞVERİŞİ TAMAMLA</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script src="{% static 'js/sepet.js' %}"></script>
+    {% endblock content %}
+
+
+
