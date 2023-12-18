@@ -24,9 +24,15 @@ class Bloglar(models.Model):
     def __str__(self):
         return self.isim
 
+class Kategori(models.Model):
+    isim=models.CharField(max_length=50,verbose_name='Kategori İsmi')
+    def __str__(self):
+        return self.isim
+
 class Urunler(models.Model):
     isim=models.CharField(max_length=50,verbose_name='Ürün İsmi')
     fiyat=models.FloatField(verbose_name='Ürün Fiyatı')
     resim=models.FileField(upload_to='urunler/',verbose_name='Ürün Resmi',null=True,blank=True)
+    kategori=models.ForeignKey(Kategori,on_delete=models.CASCADE,null=True)
     def __str__(self):
         return self.isim

@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<main class="container urunDetay">
+    <div class="row urunDetay-row">
+        <section class="col-lg-4 urunDetay-left">
+            <div class="urunDetay-image">
+                <img src="{{urunDetay.resim.url}}" alt="">
+            </div>
+        </section>
+        <section class="col-lg-6 offset-1 urunDetay-right">
+            <div class="urunDetay-content">
+                <div class="urunDetay-content-title">
+                    <h3>{{urunDetay.isim}}</h3>
+                </div>
+                <div class="urunDetay-content-fiyat">
+                    <h3>{{urunDetay.fiyat}} TL</h3>
+                </div>
+                <div class="urunDetay-content-shortAciklama">
+                    <p>Gluten miktarı 20 mg/kg’ı geçmez.</p>
+                </div>
+                <div class="urunDetay-content-urunBilgisi">
+                    <h6>Kullanım Saklama Koşulları</h6>
+                    <p>Rutubetsiz, kokusuz, kuru ve serin yerde direk güneş ışığından
+                    uzakta muhafaza ediniz. Açıldıktan sonraki glutenin çapraz bulaşmasından kaçınınız.</p>
+                </div>
+                <div class="urunDetay-content-buttons">
+                    <div class="contentButton-artiEksi">
+                        <ul class="artiEksi-list">
+                            <li class="artiEksi-content-list1">
+                                <button class="artiEksi-listIcon">
+                                    <i class="artiEksi-urunAzalt fa-solid fa-minus"></i>
+                                </button>
+                            </li>
+                            <li class="artiEksi-content-listFlex text-center">
+                                <span class="artiEksi-number">1</span>
+                                <span class="artiEksi-adet">Adet</span>
+                            </li>
+                            <li class="artiEksi-content-list2">
+                                <button class="artiEksi-listIcon">
+                                    <i class="artiEksi-urunArttir fa-solid fa-plus"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contentButton-ekle">
+                        <button>Sepete Ekle</button>
+                    </div>
+                    <div class="contentButton-favori">
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- SECTION 5 -->
+{% include "includes/_instaGonderi.html" %}
+
+{% endblock content %}

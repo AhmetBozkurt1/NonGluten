@@ -1147,6 +1147,10 @@ body.open .sepetOpenBack{
 .shopping-input{
     border-bottom: 1px solid var(--navbar-menu);
 }
+.shopping-inputButton{
+    border: none;
+    background: none;
+}
 .shopping-input-text{
     border: none;
     background: none;
@@ -1805,6 +1809,115 @@ body.open .sepetOpenBack{
     background-color: var(--background-logo);
 }
 
+/* URUNDETAY.HTML */
+.urunDetay{
+    margin-top: 8rem;
+}
+.urunDetay-image img{
+    width: 100%;
+    border-radius: 15px;
+}
+.urunDetay-right{
+    align-self: center;
+}
+.urunDetay-content-title h3{
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.urunDetay-content-fiyat h3{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.urunDetay-content-shortAciklama{
+    font-size: 19px;
+    font-style: italic;
+    border: 1.2px solid #B7B7B7;
+    border-right: none;
+    border-left: none;
+    margin-bottom: 15px;
+}
+.urunDetay-content-shortAciklama p{
+    margin-top: 15px;
+}
+.urunDetay-content-urunBilgisi{
+    font-weight: 500;
+}
+.urunDetay-content-urunBilgisi h6{
+    font-weight: 700;
+    font-size: 18px;
+}
+.urunDetay-content-buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.artiEksi-list{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.2px solid #B7B7B7;
+    padding-left: 0;
+}
+.artiEksi-content-list1{
+    height: 100%;
+    padding: 0 10px;
+}
+.artiEksi-content-list2{
+    height: 100%;
+    padding: 0 10px;
+}
+.artiEksi-listIcon{
+    border: none;
+    background: none;
+    height: 100%;
+}
+.artiEksi-urunArttir{
+    height: 100%;
+    padding-top: 8px;
+}
+.artiEksi-urunAzalt{
+    height: 100%;
+    padding-top: 8px;
+}
+.artiEksi-content-listFlex{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    border-right: 1.2px solid #B7B7B7;
+    border-left: 1.2px solid #B7B7B7;
+    padding: 0 15px;
+}
+.artiEksi-number{
+    font-weight: 900;
+}
+.contentButton-ekle button{
+    background-color: #ECA869;
+    color: #fff;
+    border: none;
+    padding: 8px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+.contentButton-favori button{
+    color: #fff;
+    background-color: var(--text-color);
+    border: none;
+    border-radius: 30px;
+}
+.contentButton-favori button i{
+    vertical-align: top;
+    padding: 8px 25px;
+    font-size: 30px;
+}
+
+
+
+
 /* MEDIA */
 @media(max-width:1137px){
     .section3-left-baslik h3{
@@ -1826,6 +1939,31 @@ body.open .sepetOpenBack{
         left: 0;
         width: 50%;
         padding: 0;
+    }
+    /* URUNDETAY.HTML */
+    .urunDetay-content-title h3{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .urunDetay-content-fiyat h3{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .urunDetay-content-shortAciklama{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .contentButton-ekle button{
+        font-size: 16px;
+        padding: 4px 15px;
+        margin-top: 5px;
+    }
+    .contentButton-favori button{
+        margin-top: 5px;
+    }
+    .contentButton-favori button i{
+        font-size: 16px;
+        padding: 8px 15px;
     }
 }
 @media(max-width:1108px){
@@ -2078,6 +2216,10 @@ body.open .sepetOpenBack{
     .sign-upRight{
         border-radius: 0 0 30px 30px;
         padding: 1rem 0;
+    }
+    /* URUNDETAY.HTML */
+    .urunDetay-right{
+        margin-left: 0;
     }
 }
 @media(max-width:768px){

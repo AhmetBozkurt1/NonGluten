@@ -91,15 +91,19 @@
                         <div class="col-lg-4">
                             <div class="shopping-navbar-search">
                                 <div class="shopping-navbar-searchOpen">
-                                    <div class="input-group shopping-input mb-3">
-                                        <span class="input-group-text shopping-input-text">
-                                            <i class="bi bi-search"></i>
-                                        </span>
-                                        <input type="search" class="form-control" aria-label="Dollar amount (with dot and two decimal places)" placeholder="Ürün Ara">
-                                        <span class="input-group-text shopping-search-exit">
-                                            <i class="bi bi-x"></i>
-                                        </span>
-                                      </div>
+                                    <form action="{% url 'urunler' %}" role="search">
+                                        <div class="input-group shopping-input mb-3">
+                                            <button class="shopping-inputButton" type="submit">
+                                                <span class="input-group-text shopping-input-text">
+                                                    <i class="bi bi-search"></i>
+                                                </span>
+                                            </button>
+                                            <input type="search" class="form-control" aria-label="Search" name="search" placeholder="Ürün Ara">
+                                            <span class="input-group-text shopping-search-exit">
+                                                <i class="bi bi-x"></i>
+                                            </span>
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="shopping-navbar-searchNow">
                                     <span class="shopping-searchNow-icon">
@@ -130,7 +134,7 @@
                         <div class="urun-button">
                             <ul class="urun-button-list">
                                 <li class="urun-incele">
-                                    <a href="#">İncele</a>
+                                    <a href="{% url 'urunDetay' i.isim %}">İncele</a>
                                 </li>
                                 <li class="urun-sepet">
                                     <a class="urun-ekle" href="#">Sepete Ekle</a>

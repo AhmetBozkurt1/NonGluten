@@ -8,4 +8,5 @@ urlpatterns=[
     path('about/',about,name='about'),
     path('sepet/',sepet,name='sepet'),
     path('blog/<str:blogAd>',blogDetay,name='blogDetay'),
+    path('urun/<str:urunAd>',urunDetay,name='urunDetay'),
 ]
