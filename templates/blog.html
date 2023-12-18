@@ -58,7 +58,7 @@
                                     <div class="recipes-article-altInfo">
                                         <div class="recipes-info-btn">
                                             <button>
-                                                <a href="#">Devamı</a>
+                                                <a href="{% url 'blogDetay' i.isim %}">Devamı</a>
                                             </button>
                                         </div>
                                         <div class="recipes-date">
@@ -80,5 +80,5 @@
         </div>
     </section>
 
-    <script src="{% static 'js/recipes.js' %}"></script>
+    <script src="{% static 'js/blog.js' %}"></script>
     {% endblock content %}

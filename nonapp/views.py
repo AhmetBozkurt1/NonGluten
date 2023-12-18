@@ -31,3 +31,12 @@ def about(request):
 
 def sepet(request):
     return render(request,'sepet.html')
+
+def blogDetay(request,blogAd):
+    blog=Bloglar.objects.get(isim=blogAd)
+    instagram=Instagram.objects.all()
+    context={
+        'blogDetay':blog,
+        'instagram':instagram,
+    }
+    return render(request,'blogDetay.html',context)

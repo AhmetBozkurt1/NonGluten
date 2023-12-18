@@ -6,5 +6,6 @@ urlpatterns=[
     path('blog/',blog,name='blog'),
     path('urunler/',urunler,name='urunler'),
     path('about/',about,name='about'),
-    path('sepet/',sepet,name='sepet')
+    path('sepet/',sepet,name='sepet'),
+    path('blog/<str:blogAd>',blogDetay,name='blogDetay'),
 ]

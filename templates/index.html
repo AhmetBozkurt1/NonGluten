@@ -151,35 +151,9 @@
             </div>
         </div>
     </div>
-
     <!-- SECTION 5 -->
-    <div class="section5-background">
-        <div class="container">
-            <div class="row section5-row">
-                <div class="col-12">
-                    <div class="section5-alt-text">
-                        <h3>Follow Me @non_glutenn</h3>
-                    </div>
-                    <div class="row section5-alt-text-border">
-                        {% for i in instagram %}
-                        <div class="col-md-4 col-lg-2 section5-alt-text-pad">
-                            <div class="section5-alt-text-image">
-                                <img src="{{i.resim.url}}" alt="">
-                                <div class="section5-imageOn">
-                                    <div class="section5-imageOn-text">
-                                        <a href="#">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include "includes/_instaGonderi.html" %}
+
     {% endblock content %}
     
     <!-- SECTION 6 -->
