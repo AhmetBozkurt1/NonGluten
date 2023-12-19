@@ -1,6 +1,7 @@
 from django.shortcuts import render,get_object_or_404
 from .models import *
 from django.db.models import Q
+from django.contrib import messages
 
 # Create your views here.
 
@@ -15,6 +16,12 @@ def index(request):
 
 def blog(request):
     bloglar=Bloglar.objects.all()
+    search=''
+    if request.GET.get('search'):
+        search=request.GET.get('search')
+        bloglar=Bloglar.objects.filter(isim__icontains=search)
+        if not bloglar:
+            messages.warning(request,'Aradığınız Blog Bulunamadı!')
     context={
         'bloglar':bloglar
     }
@@ -27,9 +34,11 @@ def urunler(request):
     if request.GET.get('search'):
         search=request.GET.get('search')
         urunler=Urunler.objects.filter(
-            Q(isim__icontains = search) |
-            Q(kategori__isim__icontains = search)
+            Q(isim__icontains=search) |
+            Q(kategori__isim__icontains=search)
         )
+        if not urunler:
+            messages.warning(request,'Aradığınız Ürün Bulunamadı!')
     context={
         'urunler':urunler,
         'kategori':kategori
@@ -69,7 +78,7 @@ def kategori(request,kategori_slug):
     uruns=Urunler.objects.filter(kategori__slug=kategori_slug)
     kategories=Kategori.objects.all()
     context={
-        'uruns':uruns,
+        'urunler':uruns,
         'kategori':kategories,
     }
-    return render(request,'kategori.html',context)
+    return render(request,'urunler.html',context)
