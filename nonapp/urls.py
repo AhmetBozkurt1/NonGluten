@@ -7,6 +7,7 @@ urlpatterns=[
     path('urunler/',urunler,name='urunler'),
     path('about/',about,name='about'),
     path('sepet/',sepet,name='sepet'),
-    path('blog/<str:blogAd>',blogDetay,name='blogDetay'),
-    path('urun/<str:urunAd>',urunDetay,name='urunDetay'),
+    path('kategori/<slug:kategori_slug>',kategori,name='kategori'),
+    path('blog/<slug:slug>',blogDetay,name='blogDetay'),
+    path('urun/<slug:slug>',urunDetay,name='urunDetay'),
 ]

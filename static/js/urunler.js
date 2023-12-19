@@ -22,17 +22,6 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 
     let localUrun=JSON.parse(localStorage.getItem("product")) || []
-
-    if(localUrun.length==0){
-        let sepetMessage=document.createElement("div")
-        sepetMessage.classList.add("row","sepetMessage")
-        sepetMessage.innerHTML+=`
-            <div class="col-12">
-                <h4 class="sepet-message">Sepetinizde Ürün Yoktur.</h4>
-            </div>
-        `
-        document.querySelector(".aside-cart-urunler").appendChild(sepetMessage)
-    }
 })
 // *DOMCONTENTLOAD BİTİŞ
 
