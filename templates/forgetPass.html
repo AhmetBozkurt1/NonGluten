@@ -1,62 +1,24 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORGETPASS</title>
-    <!-- !BOOTSTRAP CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- NAVBAR -->
-    <div class="navbar-position">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="/">
-                        <img class="rounded-3" src="/images/Logo/Adsız tasarım.jpg" alt="nongluten.logo">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link nav-border" aria-current="page" href="blog.html">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-border" href="urunler.html">Ürünler</a>
-                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-border" href="about.html">Hakkında</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-border" href="contact.html">İletişim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-padding" href="#">
-                                    <div class="navShop-icon">
-                                        <i class="bi bi-bag"></i>
-                                        <span class="shopIcon-adet">0</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-padding" href="login.html">
-                                    <div class="navShop-user">
-                                        <i class="bi bi-person-circle"></i>
-                                        <span class="navShop-logIn">Log In</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+{% extends "index.html" %}
+{% load static %}
 
+    {% block content %}
+
+    <style>
+        .forgetPass-section{
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url({% static 'images/Logo/Adsız tasarım.png' %});
+            background-position: top;
+            background-size: cover;
+            border-radius: 20px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+    </style>
+    
     <!-- ŞİFRE UNUTMA -->
     <div class="container forgetPass">
         <div class="row forgetPass-row">
@@ -81,145 +43,6 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-    <!-- FOOTER -->
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-5 footer-responsive-center">
-                <div class="footer-logo">
-                    <img class="rounded-3" src="/images/Logo/Adsız tasarım.jpg" alt="nongluten.logo">
-                </div>
-                <div class="footer-left-paragraf">
-                    <p>I'm a paragraph. Click here to add your <br> own text and edit me. Let your users get to <br> know you.</p>
-                </div>
-                <div class="footer-left-social">
-                    <ul class="footer-social-icon">
-                        <li><a href="#">
-                            <i class="bi bi-instagram"></i>
-                        </a></li>
-                        <li><a href="#">
-                            <i class="bi bi-tiktok"></i>
-                        </a></li>
-                        <li><a href="#">
-                            <i class="bi bi-youtube"></i>
-                        </a></li>
-                    </ul>
-                </div>
-                <div class="footer-left-copy">
-                    <p class="footer-left-copy-text">
-                        <i class="bi bi-c-circle"></i>
-                        2023 by Flour & Butter. <br>
-                        Powered and secured by <a href="#">NonGluten</a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="footer-right">
-                    <div class="footer-right-baslik">
-                        <h6>Site</h6>
-                    </div>
-                    <div class="footer-right-menu1">
-                        <ul class="footer-right-list">
-                            <li><a href="#">My Recipes</a></li>
-                            <li><a href="#">My Book</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="footer-right">
-                    <div class="footer-right-baslik">
-                        <h6>Contact</h6>
-                    </div>
-                    <div class="footer-right-menu2">
-                        <ul class="footer-right-list">
-                            <li class="footer-list-icon"><a href="#"><i class="bi bi-envelope-at"></i></a></li>
-                            <li class="footer-list-icon"><a href="#"><i class="bi bi-telephone-forward"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2">
-                <div class="footer-right">
-                    <div class="footer-right-baslik">
-                        <h6>Legal</h6>
-                    </div>
-                    <div class="footer-right-menu1">
-                        <ul class="footer-right-list">
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Shipping&Returns</a></li>
-                            <li><a href="#">Private Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CART OPEN BACKGROUND BLUR -->
-    <div class="sepetOpenBack"></div>
-
-    <!-- CART -->
-    <div class="cart">
-        <aside class="aside-cart">
-            <div class="aside-cart-baslik">
-                <div class="aside-cart-icon">
-                    <i class="bi bi-x-lg"></i>
-                </div>
-                <div class="aside-cart-text m-auto">
-                    <h2>SEPET</h2>
-                </div>
-            </div>
-            <div class="aside-cart-urunler">
-                <!-- SEPET ALANI -->
-            </div>
-            <div class="aside-cart-footer">
-                <div class="aside-cart-total">
-                    <h3 class="ps-3">Sepet Toplam:</h3>
-                    <h4 class="aside-cart-allFiyat ps-3"></h4>
-                </div>
-                <div class="aside-cart-sepetPage mt-4 text-center">
-                    <button class="sepeteGit">
-                        <a class="sepeteGit-link" href="sepet.html">Sepeti Görüntüle</a>
-                    </button>
-                </div>
-            </div>
-        </aside>
-    </div>
-    
-    <!-- SOCIAL MEDIA ICONS -->
-    <aside class="socialMedia-position">
-        <ul class="socialMedia-positionlist">
-            <li>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="bi bi-tiktok"></i></a>
-            </li>
-            <li>
-                <a href="#"><i class="bi bi-youtube"></i></a>
-            </li>
-        </ul>
-    </aside>
-
-
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/a09e04a105.js" crossorigin="anonymous"></script>
-    <!-- !BOOTSTRAP SCRİPT -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="cartOpen.js"></script>
     <script>
         const input=document.querySelector(".forgetPass-formInput")
         const button=document.querySelector(".forgetPass-Button")
@@ -231,5 +54,5 @@
             button.style.opacity = 0.3; // Eski haline dönen değer
         });
     </script>
-</body>
-</html>
+
+    {% endblock content %}

@@ -1,0 +1,93 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+    <main class="container hesap-container">
+        <section class="row hesap-row">
+            <article class="col-lg-3 hesap-left">
+                <div class="hesap-left-content">
+                    <div class="leftContent-header">
+                        <h5>Kullanıcı Menüsü</h5>
+                        <div class="leftContent-header-user">
+                            <div class="headerUser-text">
+                                <h6 class="headerUser-text-title">Hoş Geldiniz</h6>
+                                <h6 class="header-user-name">{{request.user|upper}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-content-altHeader">
+                        <div class="altHeader-title">
+                            <h6>Hesabım</h6>
+                        </div>
+                        <div class="altHeader-subTitle">
+                            <ul class="subTitle-hesaplist">
+                                <li class="subTitle-hesapList-link">
+                                    <i class="left-icons fa-solid fa-user"></i>
+                                    <a class="right-link" href="#">Üyelik Bilgilerim</a>
+                                </li>
+                                <li class="subTitle-hesapList-link">
+                                    <i class="left-icons fas fa-clipboard-list"></i>
+                                    <a class="right-link" href="#">Sipariş ve İade</a>
+                                </li>
+                                <li class="subTitle-hesapList-link">
+                                    <i class="left-icons fa fa-heart"></i>
+                                    <a class="right-link" href="#">Favori Ürünlerim</a>
+                                </li>
+                                <li class="subTitle-hesapList-link">
+                                    <i class="left-icons fas fa-sign-out-alt"></i>
+                                    <a class="right-link" href="{% url 'userLogout' %}"><strong>Güvenli Çıkış</strong></a>
+                                </li>
+                                <li class="subTitle-hesapList-link">
+                                    <i class="left-icons fa-solid fa-user-slash"></i>
+                                    <a class="right-link" href="{% url 'userDelete' %}"><strong>Hesabımı Sil</strong></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-lg-9 hesap-right pt-4 pt-md-0 ps-0 ps-md-4">
+                    <div class="hesap-right-content">
+                        <div class="right-content-title">
+                            <h3>Hesabım</h3>
+                        </div>
+                        <div class="row right-content-subTitle row-gap-4 row-gap-md-0">
+                            <div class="col-6 col-md-3 subTitle-iconText">
+                                <div class="right-subTitle-icon">
+                                    <i class="fas fa-address-card"></i>
+                                </div>
+                                <div class="right-subTitle-text">
+                                    <h6>Adreslerim</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 subTitle-iconText">
+                                <div class="right-subTitle-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="right-subTitle-text">
+                                    <h6>Siparişlerim</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 subTitle-iconText">
+                                <div class="right-subTitle-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="right-subTitle-text">
+                                    <h6>Hediye Çeklerim</h6>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3 subTitle-iconText">
+                                <div class="right-subTitle-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="right-subTitle-text">
+                                    <h6>Bildirim Formu</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+        </section>
+    </main>
+
+{% endblock content %}

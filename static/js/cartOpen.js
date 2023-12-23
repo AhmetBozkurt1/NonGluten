@@ -204,6 +204,4 @@ sepetAside.addEventListener("click",function(e){
     }
 })
 
-// *SEPETTE BUTONLARIN AKTİF EDİLMESİ
-
 

@@ -82,3 +82,11 @@ def kategori(request,kategori_slug):
         'kategori':kategories,
     }
     return render(request,'urunler.html',context)
+
+
+def iletisim(request):
+    instagram=Instagram.objects.all()
+    context={
+        'instagram':instagram
+    }
+    return render(request,'contact.html',context)

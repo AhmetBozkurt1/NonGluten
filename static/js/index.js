@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded",function(){
     document.querySelector(".aside-cart-urunler").appendChild(sepetMessage)
   }
 })
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,

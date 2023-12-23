@@ -10,4 +10,5 @@ urlpatterns=[
     path('urunler/kategori/<slug:kategori_slug>',kategori,name='kategori'),
     path('blog/<slug:slug>',blogDetay,name='blogDetay'),
     path('urun/<slug:slug>',urunDetay,name='urunDetay'),
+    path('iletisim',iletisim,name='iletisim')
 ]
